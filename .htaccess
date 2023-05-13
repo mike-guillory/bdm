@@ -1,0 +1,72 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # For Development #######################
+    RewriteBase /bdm/
+    # For Testing #######################
+    # RewriteBase /briandorseyministries.com/bdm/
+    # For Production #######################
+    # RewriteBase /briandorseyministries.com/
+
+
+    # If your project is in server then it should be: RewriteBase /
+    # If project is in a folder then it should be: RewriteBase /folder_name/
+
+    RewriteCond %{REQUEST_URI} ^system.*
+    RewriteRule ^(.*)$ /index.php?/$1 [L]
+
+    RewriteCond %{REQUEST_URI} ^application.*
+    RewriteRule ^(.*)$ /index.php?/$1 [L]
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php?/$1 [L]
+
+    # Your website is redirecting index.php but it is sending a 302 redirect which 
+    # is a temporary redirect. What you want to do is use a 301 Moved Permanently.
+    # Using the 301, google will be notified that the old URL is no longer valid 
+    # and update their index with the new url.
+    # Add this rule to your .htaccess
+
+    RewriteRule ^index.php/(.*)$ /$1 [R=301,L]
+    # from http://stackoverflow.com/questions/24961880/ci-google-indexing-address-with-index-php-but-there-is-no-link-with-index-php
+
+</IfModule>
+
+<IfModule !mod_rewrite.c>
+
+    # If we don't have mod_rewrite installed, all 404's
+    # can be sent to index.php, and everything works as normal.
+    # Submitted by: ElliotHaughin
+
+    ErrorDocument 404 /index.php
+
+</IfModule>
+
+#<IfModule mod_expires.c> ###### apparently this didn't work, so I needed to paste in the FilesMatch stuff below ############
+#     ExpiresActive on
+#     ExpiresByType image/jpg "access plus 1 year"
+#     ExpiresByType image/gif "access plus 1 year"
+#     ExpiresByType image/png "access plus 1 year"
+#     ExpiresByType image/icon "access plus 1 year"
+#     ExpiresByType text/html "access plus 1 month"
+#     ExpiresByType text/javascript "access plus 1 year"
+#     ExpiresByType text/css "access plus 1 month"
+#</IfModule>
+
+######################################################################################################
+###### I Had to comment this out when I moved this to Unbuntu because the word Header was causing an
+###### error; "/var/www/html/bdm/.htaccess: Invalid command 'Header', perhaps misspelled or defined by 
+###### a module not included in the server configuration" which produced a 500 Internal Server Error.
+###### It had seemed that the problem was about setting AllowOveride to All, but that now seems to have
+###### nothing to do with it.
+#####################################################################################################
+###### http://stackoverflow.com/questions/4480304/how-to-set-http-headers-for-cache-control ########
+#<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)$">
+#    Header set Cache-Control "max-age=31536000, public"
+#</FilesMatch>
+######################################################################################################
+
+
+# Uncomment the line below for production to enable GZip. There may be more to using GZip than just this.
+# AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css application/x-javascript application/javascript

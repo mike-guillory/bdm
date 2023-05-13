@@ -1,0 +1,816 @@
+@font-face {
+  font-family: 'blue highway condensed';
+  src: url("../fonts/blueHighway/blue_highway_cd-webfont.eot");
+  src: url("../fonts/blueHighway/blue_highway_cd-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/blueHighway/blue_highway_cd-webfont.woff2") format("woff2"), url("../fonts/blueHighway/blue_highway_cd-webfont.woff") format("woff"), url("../fonts/blueHighway/blue_highway_cd-webfont.ttf") format("truetype"), url("../fonts/blueHighway/blue_highway_cd-webfont.svg#blue_highwaycondensed") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+/*$orange: #e97f35;*/
+/**{
+	outline: 1px solid red;
+}*/
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #000000;
+  /*background-color: #eee*/ }
+
+#wrapper {
+  margin: 0 auto;
+  width: 1140px;
+  padding-bottom: 250px;
+  /*background-color: #13462d;*/ }
+
+.text-left {
+  text-align: left; }
+
+.text-right {
+  text-align: right; }
+
+.text-center {
+  text-align: center; }
+
+.float-left {
+  float: left; }
+
+.float-right {
+  float: right; }
+
+.red {
+  outline: red solid 1px; }
+
+.green {
+  outline: green solid 1px; }
+
+.blue {
+  outline: blue solid 1px; }
+
+.yellow {
+  outline: yellow solid 1px; }
+
+.black {
+  outline: black solid 1px; }
+
+#main-header-container {
+  width: 100%;
+  height: 120px;
+  /*	position: fixed;
+  	top: 0;
+  	left: 0;*/
+  /*background-color: #eee;*/
+  /*	z-index: 10000;*/ }
+
+#main-header {
+  /*	position: absolute; top: 0px; left: 0px;
+  	width: 100%;*/
+  margin: 0 auto;
+  width: 900px;
+  /*margin: 0 auto;*/
+  /*background-color: #fff;*/ }
+
+#main-banner {
+  width: 50%; }
+
+#main-nav-div {
+  width: 38.5%;
+  margin: 20px 0 40px 0; }
+  #main-nav-div ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+  #main-nav-div li {
+    display: inline-block;
+    margin-right: 20px;
+    padding: 5px; }
+    #main-nav-div li a:hover {
+      text-decoration: none; }
+    #main-nav-div li:last-child {
+      margin-right: 0; }
+
+a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold; }
+
+.current {
+  /* border-bottom: 5px solid $location */
+  color: #028f1d; }
+
+#location-indicator {
+  height: 5px;
+  width: 40px;
+  background-color: #33ff33;
+  /*margin-top: -11px;*/
+  position: absolute; }
+
+h2#ccm {
+  margin-top: -20px;
+  padding-left: 5px;
+  font-size: 1.2em; }
+
+#upcoming-performances-div {
+  margin: 0 auto;
+  border-radius: 5px 5px 0 0;
+  width: 1000px;
+  height: 400px;
+  /*background-color: #efefff;*/
+  padding-top: 20px;
+  box-shadow: 0px 0px 3px inset; }
+  #upcoming-performances-div h2 {
+    text-align: center; }
+
+#upcoming-performances-left {
+  height: 212px;
+  width: 510px;
+  float: left;
+  padding: 10px 30px; }
+
+.showDetails {
+  height: 40px;
+  cursor: pointer;
+  -moz-transition: all .35s ease-in;
+  -o-transition: all .35s ease-in;
+  -webkit-transition: all .35s ease-in;
+  transition: all .35s ease-in;
+  /*background-color: #ddd;*/
+  background: #444;
+  color: #fff; }
+
+#upcoming-performances-listing {
+  height: 212px;
+  width: 500px;
+  overflow: hidden;
+  display: block; }
+  #upcoming-performances-listing tr {
+    height: 40px;
+    cursor: pointer;
+    -moz-transition: all .35s ease-in;
+    -o-transition: all .35s ease-in;
+    -webkit-transition: all .35s ease-in;
+    transition: all .35s ease-in;
+    /*background-color: #ddd;*/ }
+  #upcoming-performances-listing tr:not(.showDetails):hover {
+    background: #aaa;
+    color: #fff; }
+  #upcoming-performances-listing td {
+    padding-left: 15px;
+    /*background-color: #777;*/
+    vertical-align: middle; }
+  #upcoming-performances-listing td.date {
+    width: 150px; }
+  #upcoming-performances-listing td.city {
+    width: 300px; }
+
+#upcoming-performances-right {
+  margin-top: 10px;
+  height: 180px;
+  width: 330px;
+  float: left;
+  padding: 20px 30px;
+  border-radius: 5px 5px 5px 5px;
+  /*	background-color: #333;
+  	color: #fff;*/ }
+  #upcoming-performances-right table {
+    width: 300px; }
+  #upcoming-performances-right td.time {
+    width: 70px; }
+  #upcoming-performances-right td.location {
+    width: 220px; }
+  #upcoming-performances-right th.venue-heading, #upcoming-performances-right th.details-heading {
+    padding-top: 5px;
+    text-align: left;
+    padding-left: 15px; }
+  #upcoming-performances-right th.details-heading {
+    padding-top: 30px; }
+  #upcoming-performances-right th.time-heading {
+    padding-right: 18px; }
+
+#scheduleHeading {
+  font-size: 24px;
+  padding: 10px; }
+
+/*-----------------------------------------------------------------------------------------------*/
+#news-div {
+  margin: 0 auto;
+  margin-top: 20px;
+  height: 385px;
+  width: 1000px;
+  padding-top: 50px;
+  background-image: url("../images/studio1fade_flipped.jpg");
+  background-size: 1000px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  border-radius: 5px 5px 0 0; }
+
+#availableNow-div {
+  width: 550px;
+  margin: 0 0 0 40px; }
+
+#available-now {
+  color: #fff;
+  font-family: "blue highway condensed";
+  font-size: 100px;
+  font-weight: 100;
+  margin: -10px 0 0px 0; }
+
+#get-yours {
+  color: #fff;
+  /*font-family: Amienne;*/
+  font-family: "times new roman";
+  font-size: 45px;
+  font-weight: 100;
+  margin: -10px 0 -20px 20px; }
+
+#ad-my-desire-front-cover {
+  z-index: 100000;
+  height: 440px;
+  outline: #cccccc solid 1px;
+  box-shadow: 3px 3px 5px;
+  margin: 60px 0 0 15px; }
+
+#order-here {
+  /*	position: relative;
+  	top: 180px;
+  	left: 740px;
+  	margin-left: -260px;*/
+  margin: 0 0 0 480px; }
+
+#listen-here {
+  /*	position: relative;
+  	top: 180px;
+  	left: 940px;
+  	margin-left: 0px;*/
+  margin: 0 0 0 180px; }
+
+#myDesireBanner {
+  margin: 0 auto;
+  background-color: #ffffff;
+  background-image: url("../images/NicoleCamera1194_5_darker1_cropped.jpg");
+  border: 1px solid #777;
+  width: 998px;
+  height: 230px;
+  margin-bottom: 50px; }
+  #myDesireBanner a {
+    color: #fd7700;
+    font-family: arial;
+    font-size: 16px;
+    font-weight: 600; }
+  #myDesireBanner hr {
+    /*		position: relative;
+    		top: 160px;
+    		left: 0px;
+    		width: 990px;
+    		margin-top: 0px;
+    		margin-bottom: 0px;*/
+    margin: -40px 0 0 5px;
+    width: 985px; }
+  #myDesireBanner h4 {
+    /*		position: relative;
+    		top: 55px;
+    		left: 490px;*/
+    width: 400px;
+    /*		margin-top: -40px;
+    		margin-bottom: 0px;*/
+    color: #1e588a;
+    font-family: "blue highway condensed";
+    font-size: 45px;
+    margin: 20px 0 0 500px; }
+  #myDesireBanner h3 {
+    /*		position: relative;
+    		top: 170px;
+    		left: 520px;*/
+    width: 450px;
+    /*		margin-top: -120px;*/
+    font-size: 55px;
+    font-family: "times new roman";
+    font-weight: 100;
+    margin: -5px 0 0 530px; }
+    #myDesireBanner h3 span {
+      /*			color: $signature-green;
+      			font-family: Amienne;
+      			font-size: 26px;
+      			font-weight: 600;*/
+      color: #028f1d;
+      font-family: "blue highway condensed";
+      font-size: 20px;
+      font-weight: 100; }
+  #myDesireBanner h5 {
+    /*		position: relative;
+    		top: 163px;
+    		left: 570px;*/
+    width: 400px;
+    /*		margin-top: -45px;*/
+    color: #1e588a;
+    font-family: arial;
+    font-size: 16px;
+    margin: 0 0 45px 580px; }
+
+/*--------------------------------------------------------------------------------------------*/
+.single-performance-div p {
+  margin: 0; }
+.single-performance-div h4 {
+  font-size: 1.5em;
+  margin-bottom: 5px; }
+
+/* buy_view -------------------------------------------------------------------*/
+.cdListingDiv {
+  margin-top: 50px;
+  height: 260px;
+  /*width: 1080;*/
+  padding: 0 10px; }
+  .cdListingDiv ol {
+    float: left;
+    height: 120px;
+    width: 235px;
+    padding-left: 20px; }
+
+.cdImageDiv {
+  float: left;
+  width: 230px;
+  height: 230px;
+  margin-right: 40px;
+  box-shadow: 3px 3px 4px #999; }
+  .cdImageDiv img {
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc; }
+
+.cdTitle {
+  float: left;
+  width: 800px;
+  margin: 10px 0 0 0;
+  font-size: 30px; }
+
+.listenClick {
+  font-family: "time new roman";
+  font-size: 20px;
+  width: 260px;
+  text-align: center;
+  float: right;
+  margin: 0 0 10px 0; }
+
+.price {
+  font-family: "times new roman";
+  font-style: italic;
+  color: #f00;
+  font-size: 30px;
+  font-weight: 800;
+  width: 260px;
+  text-align: center;
+  float: right;
+  margin: 0 0 5px 0; }
+
+.shippingIncluded {
+  font-family: "times new roman";
+  font-style: italic;
+  color: #f00;
+  font-size: 16px;
+  font-weight: 800;
+  width: 260px;
+  text-align: center;
+  float: right;
+  margin: 0 0 20px 0; }
+
+.payPalBuyDiv, .payPalDonateDiv {
+  text-align: center;
+  /*padding-right: 50px; */
+  /*display: inline-block;*/
+  width: 260px;
+  float: right; }
+
+.cdDescription {
+  font-style: italic;
+  font-size: 18px;
+  margin-top: -15px;
+  width: 500px;
+  float: left; }
+
+#listenPage {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 10000000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto; }
+
+#listenBackGround {
+  background: #000;
+  opacity: .7;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0; }
+
+#listenFrame {
+  border-radius: 5px;
+  background-color: #fff;
+  width: 600px;
+  height: 380px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  padding-top: 30px;
+  z-index: 10000000; }
+
+#listenDiv {
+  width: 480px;
+  margin: 0 auto; }
+
+.odd {
+  background: #ddd; }
+
+.nowPlaying {
+  background-color: #999; }
+
+#titlePlaying {
+  font-size: 24px;
+  font-weight: 800; }
+
+#listenPage {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 10000000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto; }
+
+#listenBackGround {
+  background: #000;
+  opacity: .7;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0; }
+
+#listenFrame {
+  border-radius: 5px;
+  background-color: #fff;
+  width: 600px;
+  height: 380px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  padding-top: 30px;
+  z-index: 10000000; }
+
+#listenDiv {
+  width: 480px;
+  margin: 0 auto; }
+
+#songListDiv {
+  display: inline-block;
+  margin-top: -10px; }
+
+#playlist {
+  width: 220px; }
+  #playlist li {
+    padding: 2px 0 2px 5px; }
+  #playlist a {
+    font-family: "times new roman";
+    font-size: 16px;
+    font-weight: normal; }
+
+#playerDiv {
+  width: 460px;
+  margin: 20px auto; }
+
+#closeDiv {
+  text-align: center;
+  padding-top: 20px; }
+
+.odd {
+  background: #ddd; }
+
+.nowPlaying {
+  background-color: #999; }
+
+li div {
+  display: inline-block; }
+
+#price {
+  padding-left: 30px; }
+
+#price p {
+  margin-top: 15px;
+  font-style: italic;
+  color: #f00;
+  font-size: 30px;
+  font-weight: 800; }
+
+#you-may-purchase {
+  text-align: center;
+  float: left;
+  width: 100%;
+  margin-top: -10px; }
+  #you-may-purchase p {
+    font-family: 'times new roman';
+    font-size: 24px;
+    margin-top: 10px;
+    font-weight: 700; }
+
+#samplingCdCoverImageDiv {
+  display: inline-block; }
+  #samplingCdCoverImageDiv img {
+    box-shadow: 5px 5px #999;
+    border: 1px solid #ccc; }
+
+#buyMusicContainer {
+  position: relative;
+  height: 740px;
+  font-family: 'Times New Roman'; }
+
+#buyMusicContainerImageDiv {
+  position: absolute;
+  left: 125px;
+  top: -1px;
+  box-shadow: 3px 3px 4px #999;
+  height: 719px;
+  width: 842px; }
+  #buyMusicContainerImageDiv img {
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc; }
+
+#buyMusicDiv {
+  position: absolute;
+  padding-left: 420px; }
+  #buyMusicDiv h2 {
+    text-align: center;
+    font-size: 64px;
+    margin-left: -50px;
+    margin-top: 40px; }
+  #buyMusicDiv h3 {
+    text-align: center;
+    font-size: 48px;
+    margin-left: -50px;
+    margin-top: -50px;
+    margin-bottom: 20px; }
+  #buyMusicDiv a {
+    padding-left: 40px;
+    font-size: 24px; }
+  #buyMusicDiv ol {
+    font-size: 21px;
+    font-weight: 800; }
+  #buyMusicDiv h4 {
+    margin-top: 0px;
+    margin-bottom: 15px;
+    font-style: italic;
+    font-weight: 800;
+    font-size: 24px; }
+
+/* admin ---------------------------------------------------------------------------------- */
+/* See admin.scss*/
+/* ---------------------------------------------------------------------------------------- */
+/* About */
+#about-div {
+  width: 900px;
+  height: 480px;
+  margin: 50px auto; }
+  #about-div img {
+    float: left;
+    margin-right: 45px;
+    margin-top: 4px;
+    box-shadow: 3px 3px 10px; }
+
+#about-brian-text {
+  height: 430px;
+  /*padding-top: 5px;*/ }
+  #about-brian-text p {
+    font-size: 21px;
+    font-family: "times new romans";
+    line-height: 1.4; }
+
+/* altered Bootstrap */
+.row {
+  margin: 0px; }
+  .row div {
+    padding: 10px; }
+
+.container {
+  margin: 30px;
+  padding: 0px; }
+
+/* end altered Bootstrap */
+#admin-body {
+  /*background-color: #eee*/ }
+
+#admin-wrapper {
+  margin: 0 auto;
+  width: 1100px;
+  padding-bottom: 50px; }
+
+.grad1 {
+  /*height: 200px;*/
+  background-color: #13462d;
+  /* Fallback */
+  background-image: -webkit-gradient(linear, 100% 0%, 0% 0%, color-stop(0%, #238253), color-stop(100%, #13462d));
+  /* For Android browsers below 4.0*/
+  background: -webkit-linear-gradient(right, #238253, #13462d);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #238253, #13462d);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #238253, #13462d);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to left, #238253, #13462d);
+  /* Standard syntax (must be last) */ }
+
+.loginErrors {
+  color: red;
+  text-align: center;
+  width: 300px;
+  margin: -150px auto; }
+
+#adminDashboard {
+  width: 1000px;
+  margin: 0 auto; }
+  #adminDashboard h1 {
+    margin-top: 150px;
+    text-align: center; }
+  #adminDashboard hr {
+    margin-top: 250px; }
+
+#admin-header hr {
+  margin-top: 50px; }
+
+#admin-nav {
+  width: 695px;
+  margin-top: 10px;
+  display: inline-block; }
+  #admin-nav a {
+    font-size: 20px;
+    margin: 20px; }
+  #admin-nav p {
+    width: 5px;
+    display: inline-block; }
+
+#admin-logout {
+  width: 380px;
+  margin-top: 10px;
+  padding-right: 20px;
+  text-align: right;
+  display: inline-block; }
+
+#edit-schedule-div {
+  height: 700px; }
+  #edit-schedule-div h1 {
+    /*text-align: center;*/
+    width: 1000px;
+    margin: 50px auto 20px auto;
+    padding-left: 20px; }
+
+#edit-schedule-container {
+  width: 1004px;
+  height: 600px;
+  margin: 0 auto; }
+
+#hr-div {
+  width: 900px;
+  margin: 0 auto; }
+
+#edit-schedule-left {
+  width: 460px;
+  height: 360px;
+  padding: 20px;
+  float: left;
+  /*border: 1px solid black;*/ }
+
+#edit-schedule-right {
+  width: 500px;
+  height: 400px;
+  float: left;
+  margin-top: -50px;
+  /*border: 1px solid black;*/ }
+  #edit-schedule-right hr {
+    width: 400px;
+    margin-top: 10px;
+    margin-left: 15px; }
+
+#submit-btn-div input {
+  background: #0f0;
+  color: #fff;
+  font-weight: bold;
+  padding: 5px;
+  font-size: 14px; }
+#submit-btn-div #update-btn {
+  background: #00f;
+  color: #fff;
+  font-weight: bold;
+  padding: 5px;
+  font-size: 14px; }
+#submit-btn-div #delete-btn {
+  background: #f00;
+  color: #fff;
+  font-weight: bold;
+  padding: 5px;
+  font-size: 14px; }
+#submit-btn-div #cancel-btn {
+  background: #0f0;
+  color: #fff;
+  font-weight: bold;
+  padding: 5px;
+  font-size: 14px; }
+
+#edit-cds-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 40% 60%; }
+
+#edit-cds-left {
+  /*float: left;*/ }
+
+#edit-cds-right {
+  /*float: left;*/ }
+
+.edit-cd-image {
+  grid-area: image; }
+
+.edit-cd-details {
+  grid-area: details; }
+
+.edit-cd-description {
+  grid-area: description; }
+
+.edit-cds-cd-list-div {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: auto;
+  grid-template-areas: "image details" "description description"; }
+  .edit-cds-cd-list-div ul {
+    list-style: none; }
+
+#enterSongTitles {
+  background: blue;
+  color: #fff;
+  font-weight: bold;
+  padding: 5px;
+  font-size: 14px; }
+
+#details-div {
+  margin-top: 10px;
+  height: 350px;
+  width: 440px;
+  float: left;
+  /*padding: 20px 30px;*/
+  border-radius: 5px 5px 5px 5px;
+  /*  background-color: #333;
+      color: #fff;*/ }
+  #details-div td.location {
+    width: 300px; }
+  #details-div th.venue-heading, #details-div th.details-heading {
+    padding-top: 5px;
+    text-align: left;
+    padding-left: 15px; }
+  #details-div th.details-heading {
+    padding-top: 30px; }
+  #details-div th.time-heading {
+    text-align: center; }
+
+textarea {
+  resize: none; }
+
+#upload-btn-div {
+  text-align: center; }
+
+#errors {
+  color: #f00; }
+
+#upload-btn-div input {
+  background: #0f0;
+  color: #fff;
+  font-weight: bold;
+  padding: 5px;
+  font-size: 14px; }
+
+#updated {
+  padding-left: 170px;
+  color: #fff;
+  font-weight: 800; }
+
+#cd_listing {
+  display: inline-block; }
+
+#cd_listing_div_admin {
+  margin: 15px 0 15px 0; }
+
+.song-title-div {
+  margin-bottom: 10px; }
+
+#gallery-content {
+  width: 850px;
+  margin: 0 auto; }
+  #gallery-content img {
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    box-shadow: 3px 3px 10px; }
+
+/*# sourceMappingURL=style.css.map */

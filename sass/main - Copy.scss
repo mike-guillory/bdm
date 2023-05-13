@@ -1,0 +1,379 @@
+@import 'colors.scss';
+
+body{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: $text-color;	
+	/*background-color: #ccc;*/
+	/*margin: 0 auto;*/
+	/*background-color: #011e3b;*/
+    /*background-image: url('../images/NicoleCamera1194_3.jpg');
+    background-position: 0 150px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;*/
+}
+
+#wrapper{
+	margin: 0 auto;
+	width: 1000px;
+}
+
+.text-left{
+	text-align: left
+}
+
+.text-right{
+	text-align: right
+}
+
+.text-center{
+	text-align: center
+}
+
+.float-left{
+	float: left
+}
+
+.float-right{
+	float: right
+}
+
+.red{
+	outline: red solid 1px
+}
+
+.green{
+	outline: green solid 1px
+}
+
+.blue{
+	outline: blue solid 1px
+}
+
+.yellow{
+	outline: yellow solid 1px
+}
+
+.black{
+	outline: black solid 1px
+}
+
+#main-header-container{
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: #ffffff;
+	z-index: 10000;
+}
+
+#main-header{
+/*	position: absolute; top: 0px; left: 0px;
+	width: 100%;*/
+	width: 1000px;
+	margin: 0 auto;
+	/*background-color: #fff;*/
+}
+
+#main-banner{
+	width: 50%;
+}
+
+#main-nav-div{
+	width: 38.5%;
+	margin: 20px 0 40px 0;
+
+	ul{
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	li{
+		display: inline-block;
+		margin-right: 20px;
+		padding: 5px;
+
+		a:hover{
+			text-decoration: none;
+		}
+
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+}
+
+a{
+	text-decoration: none;
+	color: $text-color;
+	font-weight: bold;
+}
+
+.current{
+	/* border-bottom: 5px solid $location */
+	color: $signature-green;
+}
+
+#location-indicator{
+	height: 5px;
+	width: 40px;
+	background-color: $location;
+	/*margin-top: -11px;*/
+	position: absolute;
+}
+
+h2#ccm{
+	margin-top: -20px;
+	padding-left: 5px;
+	font-size: 1.2em;
+}
+
+#upcoming-performances-div{
+	color: #fff;
+	padding-left: 40px;
+	padding-top: 40px
+}
+
+#upcoming-performances-listing{
+	padding-left: 40px;
+	padding-right: 40px; 
+
+	p{
+		padding-left: 10px;
+	}
+}
+
+
+
+
+/*-----------------------------------------------------------------------------------------------*/
+
+
+
+#upcoming-performances-div, #news-div{
+
+	font-size: 14px;
+
+	h3{
+		font-size: 26px;
+	}
+
+	h4{
+		font-size: 18px;
+		margin-bottom: 0;
+	}
+}
+
+#news-div{
+	margin-top: 170px;
+	height: 435px;
+	width: 1000px;
+	background-image: url('../images/studio1fade_flipped.jpg');
+	background-size: 1000px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    /*outline: #ccc solid 2px;*/
+    border-radius: 5px 5px 0 0;
+}
+
+#availableNow{
+	position: relative;
+	top: 45px;
+	width: 550px;
+	height: 130px;
+}
+
+#order-here{
+	position: relative;
+	top: 180px;
+	left: 740px;
+	margin-left: -260px;
+}
+
+#listen-here{
+	position: relative;
+	top: 180px;
+	left: 940px;
+	margin-left: 0px;
+}
+
+#now-available{
+	/*color: $orange;*/
+	color: #fff;
+	/*font-family: yesteryear;*/
+	font-family: "blue highway condensed";
+	font-size: 100px;
+	/*font-size: 70px;*/
+	font-weight: 100;
+	position: relative;
+	top: 5px;
+	left: 0;
+	margin-top: -50px;
+	margin-right: -50px;
+	margin-bottom: -50px;
+	margin-left: 30px;
+}
+
+#get-yours{
+	/*color: $orange;*/
+	color: #fff;
+	/*font-family: arial;*/
+	font-family: Amienne;
+/*	font-size: 70px;
+	font-weight: 100;*/
+	position: relative;
+	top: 40px;
+	left: 0;
+	margin-top: -50px;
+	margin-right: -50px;
+	margin-bottom: -50px;
+	margin-left: 50px;
+}
+
+#myDesireBanner{
+	background-image: url('../images/NicoleCamera1194_5.jpg');
+	/*outline: #dddddd solid 1px;*/
+	border: 1px solid #777; /*#dddddd;*/
+	/*margin-top: 490px;*/
+
+	a{
+		color: $orange;
+		font-family: arial;
+		font-size: 16px;
+		font-weight: 600;
+	}
+
+	hr{
+		position: relative;
+		top: 160px;
+		left: 0px;
+		width: 990px;
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
+	h4{
+		position: relative;
+		top: 55px;
+		left: 490px;
+		width: 400px;
+		margin-top: -40px;
+		margin-bottom: 0px;
+		color: $banner-blue;
+		font-family: "blue highway condensed";
+		font-size: 45px
+	}
+	h3{
+		position: relative;
+		top: 170px;
+		left: 520px;
+		width: 450px;
+		margin-top: -120px;
+		font-size: 55px;
+		font-family: "times new roman";
+		font-weight: 100;
+
+		span{
+			color: $signature-green;
+			font-family: Amienne;
+			font-size: 26px;
+			font-weight: 600;
+		}
+	}
+	h5{
+		position: relative;
+		top: 163px;
+		left: 570px;
+		width: 400px;
+		margin-top: -45px;
+		color: $banner-blue;
+		font-family: arial;
+		font-size: 16px;
+
+	}
+}
+
+
+
+/*--------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+.single-performance-div{
+
+	p{
+		margin: 0;
+	}
+
+	h4{
+		font-size: 1.5em;
+		margin-bottom: 5px;
+	}
+}
+
+#listenPage{
+	display:none;
+	width:100%;
+	height:100%;
+	position:fixed;
+	z-index:10000000;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	margin:auto
+}
+
+#listenBackGround{
+	background:#000;
+	opacity:.7;
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0
+}
+
+#listenFrame{
+	border-radius:5px;
+	background-color:#fff;
+	width:600px;
+	height:380px;
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	margin:auto;
+	padding-top: 30px;
+	z-index:10000000
+}
+
+#listenDiv{
+	width: 480px;
+	margin: 0 auto;
+}
+
+#playlist li{
+	padding-bottom: 2px;
+	padding-top: 2px
+}
+
+.odd{
+	background: #ddd
+}
+
+.nowPlaying{
+	background-color: #999
+}
+
+	#titlePlaying{
+	font-size: 24px;
+	font-weight: 800
+}
+

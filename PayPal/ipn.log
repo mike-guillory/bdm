@@ -1,0 +1,33 @@
+[2016-02-29 23:27 UTC] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1052
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=1.00&protection_eligibility=Eligible&address_status=confirmed&payer_id=XH5XPBLUHZDHA&tax=0.00&address_street=1+Maire-Victorin&payment_date=15%3A27%3A19+Feb+29%2C+2016+PST&payment_status=Completed&charset=windows-1252&address_zip=M5A+1E1&first_name=Buyer&mc_fee=0.33&address_country_code=CA&address_name=Buyer+OneVarNoCard&notify_version=3.8&custom=&payer_status=verified&business=mike-seller%40mail.com&address_country=Canada&address_city=Toronto&quantity=1&verify_sign=A6XIxExwos0uws7vD0xFstD2LvFiA22rA5rvRt44qmxSIuJcfZDy25OF&payer_email=mike-buyer1%40mail.com&txn_id=0A809193S59433645&payment_type=instant&btn_id=3276556&last_name=OneVarNoCard&address_state=Ontario&receiver_email=mike-seller%40mail.com&payment_fee=&shipping_discount=0.00&insurance_amount=0.00&receiver_id=NWH47EHAJ8KYL&txn_type=web_accept&item_name=CD&discount=0.00&mc_currency=CAD&item_number=001&residence_country=CA&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=&shipping=0.00&ipn_track_id=403221dfe36ac
+[2016-02-29 23:27 UTC] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Mon, 29 Feb 2016 23:27:26 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=5tREh9es2U4hze0I8CdLVuUy5B51l_dmc5QSCbr3t9n-1fv__aueBTH6QqvHCKQ2k3V90BSJbvWXMzZCmGW_E4SWG991nPo6yWQxXklxIf0_PDHAD_KcQp6lyN084BzWX199xvOFF-PQLW02JDu_wk7b7nRw_QGx-DoYK4fXkZ1zYhY2ZRBdzG6oNR00rjrB7CglkkzzK2QKVUDf2mL3-odn14Q9XykFSW-U03UeP0v3MT6LtOjggXAfUnqRm8-sy14Dje75uGNQRInRZmb1aUrrRNgCssPKCK_qhTSFm1bPLDdp279IS0h25x_gxXJwgeqXd1ir7hGnyE6I8rdWnH4u4v9yzHOB2dZ1WIXbbQh60deNjeXPY7d1yB3ppKHnQj3Abb2bx18tW10vFYMvt0A-G0615PDpo7fG1XnicW2ZsjUya2Pa2mWaWAi; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Thu, 26-Feb-2026 23:27:26 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Wed, 28-Feb-2018 23:27:26 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1456788446683892; path=/; expires=Wed, 21-Feb-46 23:27:26 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: 980ff956a1fe5
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D3738424406; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+
+[2016-02-29 23:27 UTC] Verified IPN: cmd=_notify-validate&mc_gross=1.00&protection_eligibility=Eligible&address_status=confirmed&payer_id=XH5XPBLUHZDHA&tax=0.00&address_street=1+Maire-Victorin&payment_date=15%3A27%3A19+Feb+29%2C+2016+PST&payment_status=Completed&charset=windows-1252&address_zip=M5A+1E1&first_name=Buyer&mc_fee=0.33&address_country_code=CA&address_name=Buyer+OneVarNoCard&notify_version=3.8&custom=&payer_status=verified&business=mike-seller%40mail.com&address_country=Canada&address_city=Toronto&quantity=1&verify_sign=A6XIxExwos0uws7vD0xFstD2LvFiA22rA5rvRt44qmxSIuJcfZDy25OF&payer_email=mike-buyer1%40mail.com&txn_id=0A809193S59433645&payment_type=instant&btn_id=3276556&last_name=OneVarNoCard&address_state=Ontario&receiver_email=mike-seller%40mail.com&payment_fee=&shipping_discount=0.00&insurance_amount=0.00&receiver_id=NWH47EHAJ8KYL&txn_type=web_accept&item_name=CD&discount=0.00&mc_currency=CAD&item_number=001&residence_country=CA&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=&shipping=0.00&ipn_track_id=403221dfe36ac 
