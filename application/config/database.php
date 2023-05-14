@@ -88,7 +88,7 @@ $db['default'] = array(
 	// Production /////////////////////
 	'database' => 'u239323243_bdm',
 	'username' => 'u239323243_mguillory',
-	'password' => 'myN2652NC140!!',
+	'password' => '',
 	// 'database' => 'brianDorseyMinistries',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
